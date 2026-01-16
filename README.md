@@ -1,4 +1,4 @@
-# Moje Portfolio – Jan Zima 🎀
+# Moje Portfolio – Jan Zima 
 
 Zdravím! Tohle je moje osobní portfolio, které jsem nakódoval v rámci pololetní práce 4. ročníku. Je to pro mě takový "hub", kde propojuju všechno, co studuji a co mě baví – od grafického designu přes kódování až po tvorbu webů.
 
@@ -30,3 +30,4 @@ Aby byl web online a dostupný pro všechny, využil jsem kombinaci GitHubu a Ne
 2.  **Netlify**: Pro hosting jsem zvolil Netlify. Je to super jednoduché – stačilo připojit můj GitHub účet, vybrat správný repozitář a Netlify web samo nasadilo. Jakmile udělám změnu na GitHubu, web se automaticky aktualizuje.
 
 Děkuji za návštěvu!
+
