@@ -1,0 +1,203 @@
+/* nastavuje barvu pozadi a font*/
+body {
+  background-color: #cccccc;
+  font-family: Arial, sans-serif;
+  margin: 0%;
+}
+
+header {
+  background-color: #0f0f0f;
+  overflow: hidden; 
+  height: 77px;
+  position: sticky;
+  top: 0%;
+  z-index: 999;
+}
+
+/* nastavuje logo v headeru*/
+.🐐{
+  max-height: 53px;
+  padding-left: 15px;
+  margin-top: 11px;
+}
+/* menu */
+#menu {
+  background-color: #0f0f0f;
+  overflow: hidden; 
+}
+
+#menu a.👈{
+  margin-right: 15px;
+}
+
+#menu a {
+  font-family: 'Bebas Neue',Arial, sans-serif;
+  font-size: 34px;
+  float: right;
+  color: white;
+  padding: 20px 20px;
+  text-decoration: none;
+}
+
+#menu a.active {
+  background-color: #9e302e;
+  color: white;
+}
+
+#menu a:hover:not(.active) {
+  background-color: whitesmoke;
+  color: #9d2f2d;
+}
+/* nadpisi */
+h1,h2 {
+  font-family: 'Chakra Petch', sans-serif;;
+  text-align: center;
+  margin-top: 50px;
+}
+/* text */
+p{
+  font-family: 'Chakra Petch', sans-serif;;
+  text-align: center;
+}
+
+/* nastavuje table pro obrazky */
+table {
+  margin: auto;
+}
+
+td {
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+/* nastavuje obrazky */
+img {
+  max-width: 300px;
+  height: 300px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+/* pridava style pro hover tracklist */
+*{
+  margin: 20;
+  padding: 20;
+  box-sizing: border-box;
+}
+.box{
+  float : inline-start;
+  background-color: #0f0f0f;
+  color: #9d2f2d;
+  width: 125px;
+  line-height: 125px;
+  text-align: center;
+  margin: 10px;
+  display: none;
+}
+/* div pro covery*/
+.album {
+  position: relative;
+  display: inline-block;
+  
+}
+
+.tracklist {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  color: #fff;
+  width: 100%;
+  height: 99%;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+  overflow: auto; 
+}
+
+.tracklist h3,h4 {
+  margin-top: 0;
+}
+
+.tracklist ul {
+  list-style-type: none;
+  padding: 0;
+  max-height: 150px;  
+  overflow-y: auto;  
+}
+
+.album:hover .tracklist {
+  opacity: 1;
+  visibility: visible;
+}
+/* nastavuje odkazové tlačítka na spotify*/
+.spotify-link {
+  display: inline-block;
+  background-color: #1db954;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.spotify-link:hover {
+  background-color: #169246;
+}
+/* nastavuje odkazové tlačítka na youtube*/
+.youtube-link {
+  display: inline-block;
+  background-color: #9d2f2d;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.youtube-link:hover {
+  background-color: #9d2f2d;
+}
+
+/*nastavuje footer*/
+footer {
+  background-color: #0f0f0f;
+  color: #9d2f2d;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*nastavuje footer ikonky*/
+.🦾 {
+  max-width: 35px;
+  max-height: 35px;
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.ikonky {
+  display: flex;
+  align-items: center;
+}
+/* text ve footeru*/
+.text-container,p {
+  flex-grow: 1; 
+  display: flex;
+  justify-content: center; 
+  font-family: 'Kodchasan', sans-serif;
+}
+/*nastavuje logo archetyp51*/
+.prave-logo {
+  display: flex;
+  align-items: center;
+}
+
+.prave-logo img {
+  height: 38px;
+  border-radius: 0%;
+}

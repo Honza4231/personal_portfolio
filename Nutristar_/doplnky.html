@@ -1,0 +1,210 @@
+<!DOCTYPE html>  
+<html lang="cs">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Doplňky Stravy - FitStore</title>  
+    <!-- Bootstrap CSS -->  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">  
+    <!-- Externí CSS -->  
+    <link rel="stylesheet" href="css\products.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>  
+<body>  
+    <div class="wrapper">  
+        <!-- Navigační menu -->  
+        <nav class="navbar navbar-expand-lg navbar-dark bg-darkest shadow-sm">  
+            <div class="container">  
+                <a class="navbar-brand" href="home.html">  
+                    <img src="images\logo.webp" alt="NutristarLogo" width="150">  
+                </a>  
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"   
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">  
+                    <span class="navbar-toggler-icon"></span>  
+                </button>  
+                <div class="collapse navbar-collapse" id="navbarNav">  
+                    <ul class="navbar-nav mx-auto">  
+                        <li class="nav-item"><a class="nav-link" href="prislusenstvi.html">Příslušenství</a></li>  
+                        <li class="nav-item"><a class="nav-link" href="sportObleceni.html">Sportovní Oblečení</a></li>  
+                        <li class="nav-item"><a class="nav-link active" href="doplnky.html">Doplňky Stravy</a></li> 
+                    </ul>  
+                    <div class="dropdown">  
+                        <button class="btn btn-outline-light dropdown-toggle" type="button" id="cartDropdown" data-bs-toggle="dropdown" aria-expanded="false">  
+                            <img src="images\cart-shopping-fast.png" alt="Cart" width="24"><span id="cart-count">(0)</span>  
+                        </button>  
+                        <div class="dropdown-menu dropdown-menu-end p-3" aria-labelledby="cartDropdown" style="min-width: 250px;">  
+                            <div id="cart-content" class="text-center">  
+                                Prazdný košík! Přidejte prosím své položky...  
+                            </div> 
+                            <hr> 
+                            <div id="cart-total" class="text-center mt-2">Celková částka: 0 Kč</div>
+                        </div>  
+                    </div>  
+                </div>  
+            </div>  
+        </nav>  
+
+        <div class="container mt-4">  
+            <div class="row">  
+                <div class="col-md-3 mb-3">  
+                    <!-- Mobile menu -->  
+                    <button class="btn btn-darkest d-md-none w-100" type="button" data-bs-toggle="collapse" data-bs-target="#filterCollapse">  
+                        Filtr  
+                    </button>  
+                    <!-- Filtrace -->  
+                    <div class="collapse d-md-block mt-3" id="filterCollapse">  
+                        <h5>Kategorie</h5>  
+                        <ul class="list-group" id="categoryFilter">  
+                            <li class="list-group-item" data-category="vitaminy">Vitamíny a minerály</li>  
+                            <li class="list-group-item" data-category="proteiny">Proteiny</li>  
+                            <li class="list-group-item" data-category="doplnky">Doplňky stravy</li>  
+                        </ul>  
+                        <h5 class="mt-4">Cena</h5>  
+                        <div class="price-filter">  
+                            <div class="price-value">  
+                                <span id="minPriceValue">100 Kč</span>  
+                                <span id="maxPriceValue">1669 Kč</span>  
+                            </div>  
+                            <div class="slider-container">  
+                                <div class="slider-track"></div>  
+                                <div class="slider-range" id="sliderRange"></div>  
+                                <input type="range" min="100" max="1669" value="100" class="slider-min" id="minPrice">  
+                                <input type="range" min="100" max="1669" value="1669" class="slider-max" id="maxPrice">  
+                            </div>  
+                        </div>  
+                        <h5 class="mt-4">Vyhledávání</h5>  
+                        <input type="text" class="form-control" id="productSearch" placeholder="Zadejte hledaný text...">  
+                        <button class="btn btn-primary mt-3 w-100" id="filterButton" type="button">Hledat</button>  
+                        <button class="btn btn-darkest mt-2 w-100" id="cancelFilterButton" type="button" style="display: none;">Zrušit filtr</button>  
+                    </div>  
+                </div>  
+                <div class="col-md-9">  
+                    <h2 class="mb-4">Vitamíny a minerály</h2>  
+                    <div class="row" id="productGrid">  
+                        <!-- Produkty -->  
+                        <div class="col-md-4 mb-4" data-category="vitaminy">  
+                            <div class="card">  
+                                <img src="images\zinek.webp" class="card-img-top" alt="Zinek">
+                                <div class="card-body">  
+                                    <h5 class="card-title">Zinek</h5>  
+                                    <p class="card-text price">108 Kč</p>  
+                                    <p class="card-text">Skladem</p>  
+                                    <button class="btn btn-warning">Do košíku</button>  
+                                </div>  
+                            </div>  
+                        </div>  
+                        <div class="col-md-4 mb-4" data-category="vitaminy">  
+                            <div class="card">  
+                                <img src="images\vitaminD.webp" class="card-img-top" alt="Vitamin D3">  
+                                <div class="card-body">  
+                                    <h5 class="card-title">Vitamin D3</h5>  
+                                    <p class="card-text price">132 Kč</p>  
+                                    <p class="card-text">Skladem</p>  
+                                    <button class="btn btn-warning">Do košíku</button>  
+                                </div>  
+                            </div>  
+                        </div>  
+                        <div class="col-md-4 mb-4" data-category="vitaminy">  
+                            <div class="card">  
+                                <img src="images\vitaminC.webp" class="card-img-top" alt="Vitamin C">  
+                                <div class="card-body">  
+                                    <h5 class="card-title">Vitamin C</h5>  
+                                    <p class="card-text price">140 Kč</p>  
+                                    <p class="card-text">Skladem</p>  
+                                    <button class="btn btn-warning">Do košíku</button>  
+                                </div>  
+                            </div>  
+                        </div>
+                        <div class="col-md-4 mb-4" data-category="proteiny">  
+                            <div class="card">  
+                                <img src="images\pro_cokolada.webp" class="card-img-top" alt="Protein Cokolada">  
+                                <div class="card-body">  
+                                    <h5 class="card-title">Whey 82 Plus - čokoláda</h5>  
+                                    <p class="card-text price">558 Kč</p>  
+                                    <p class="card-text">Skladem</p>  
+                                    <button class="btn btn-warning">Do košíku</button>  
+                                </div>  
+                            </div>  
+                        </div>  
+                        <div class="col-md-4 mb-4" data-category="proteiny">  
+                            <div class="card">  
+                                <img src="images\pro_jahoda.webp" class="card-img-top" alt="Protein Jahoda">
+                                <div class="card-body">  
+                                    <h5 class="card-title">Whey 82 Plus - jahoda</h5>  
+                                    <p class="card-text price">505 Kč</p>  
+                                    <p class="card-text">Skladem</p>  
+                                    <button class="btn btn-warning">Do košíku</button>  
+                                </div>  
+                            </div>  
+                        </div>  
+                        <div class="col-md-4 mb-4" data-category="proteiny">  
+                            <div class="card">  
+                                <img src="images\pro_vanilka.webp" class="card-img-top" alt="Protein Vanilka">  
+                                <div class="card-body">  
+                                    <h5 class="card-title">Whey 82 Plus - vanilka</h5>  
+                                    <p class="card-text price">620 Kč</p>  
+                                    <p class="card-text">Skladem</p>  
+                                    <button class="btn btn-warning">Do košíku</button>  
+                                </div>  
+                            </div>  
+                        </div>
+                        <div class="col-md-4 mb-4" data-category="doplnky">  
+                            <div class="card">  
+                                <img src="images\magnesium.webp" class="card-img-top" alt="Magnesium">  
+                                <div class="card-body">  
+                                    <h5 class="card-title">Magnesium + B-komplex</h5>  
+                                    <p class="card-text price">101 Kč</p>  
+                                    <p class="card-text">Skladem</p>  
+                                    <button class="btn btn-warning">Do košíku</button>  
+                                </div>  
+                            </div>  
+                        </div>  
+                        <div class="col-md-4 mb-4" data-category="doplnky">  
+                            <div class="card">  
+                                <img src="images\collagen.webp" class="card-img-top" alt="Collagen FIT">  
+                                <div class="card-body">  
+                                    <h5 class="card-title">Collagen FIT</h5>  
+                                    <p class="card-text price">259 Kč</p>  
+                                    <p class="card-text">Skladem</p>  
+                                    <button class="btn btn-warning">Do košíku</button>  
+                                </div>  
+                            </div>  
+                        </div>  
+                        <div class="col-md-4 mb-4" data-category="doplnky">  
+                            <div class="card">  
+                                <img src="images\collagen_multi.webp" class="card-img-top" alt="Collagen Multi">  
+                                <div class="card-body">  
+                                    <h5 class="card-title">2+1 Collagen FIT</h5>  
+                                    <p class="card-text price">599Kč</p>  
+                                    <p class="card-text">Skladem</p>  
+                                    <button class="btn btn-warning">Do košíku</button>  
+                                </div>  
+                            </div>  
+                        </div> 
+                        <!-- Další produkty mohou být přidány zde -->  
+                    </div>  
+                </div>  
+            </div>  
+        </div>  
+ 
+        <!-- Footer -->
+        <footer class="footer bg-dark py-4">
+            <div class="footerContent container text-center">
+                <div class="social-links">
+                    <a href="https://www.facebook.com/compranutristar?locale=cs_CZ" class="text-purple me-3" target="_blank">Facebook</a>
+                    <a href="https://www.instagram.com/nutristar.cz/" class="text-purple me-3" target="_blank">Instagram</a>
+                    <a href="#" class="text-purple" target="_blank">Kontakty</a>
+                </div>
+                <p class="footerText">&copy; 2025 Nutristar. Všechna práva vyhrazena.</p>
+            </div>
+        </footer>
+    </div>  
+
+    <!-- Bootstrap JS a Popper.js -->  
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>  
+    <script src="javascript/products.js"></script>
+</body>  
+</html>  

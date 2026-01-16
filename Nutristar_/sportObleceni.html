@@ -1,0 +1,239 @@
+<!DOCTYPE html>  
+<html lang="cs">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Doplňky Stravy - FitStore</title>  
+    <!-- Bootstrap CSS -->  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">  
+    <!-- Externí CSS -->  
+    <link rel="stylesheet" href="css\sportObleceni.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>  
+<body>  
+    <div class="wrapper">  
+        <!-- Navigační menu -->  
+        <nav class="navbar navbar-expand-lg navbar-dark bg-darkest shadow-sm">  
+            <div class="container">  
+                <a class="navbar-brand" href="home.html">  
+                    <img src="images\logo.webp" alt="NutristarLogo" width="150">  
+                </a>  
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"   
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">  
+                    <span class="navbar-toggler-icon"></span>  
+                </button>  
+                <div class="collapse navbar-collapse" id="navbarNav">  
+                    <ul class="navbar-nav mx-auto">  
+                        <li class="nav-item"><a class="nav-link" href="prislusenstvi.html">Příslušenství</a></li>  
+                        <li class="nav-item"><a class="nav-link" href="sportObleceni.html">Sportovní Oblečení</a></li>  
+                        <li class="nav-item"><a class="nav-link" href="doplnky.html">Doplňky Stravy</a></li>
+                    </ul>  
+                    <div class="dropdown">  
+                        <button class="btn btn-outline-light dropdown-toggle" type="button" id="cartDropdown" data-bs-toggle="dropdown" aria-expanded="false">  
+                            <img src="images\cart-shopping-fast.png" alt="Cart" width="24"><span id="cart-count">(0)</span>  
+                        </button>  
+                        <div class="dropdown-menu dropdown-menu-end p-3" aria-labelledby="cartDropdown" style="min-width: 250px;">  
+                            <div id="cart-content" class="text-center">  
+                                Prazdný košík! Přidejte prosím své položky...  
+                            </div> 
+                            <hr> 
+                            <div id="cart-total" class="text-center mt-2">Celková částka: 0 Kč</div>
+                        </div>  
+                    </div>  
+                </div>  
+            </div>  
+        </nav>  
+
+        <div class="container mt-4">  
+            <div class="row">  
+                <div class="col-md-3 mb-3">  
+                    <!-- Mobile menu -->  
+                    <button class="btn btn-darkest d-md-none w-100" type="button" data-bs-toggle="collapse" data-bs-target="#filterCollapse">  
+                        Filtr  
+                    </button>  
+                    <!-- Filtrace -->  
+                    <div class="collapse d-md-block mt-3" id="filterCollapse">  
+                        <h5>Kategorie</h5> 
+                        <!-- Deklarace Kategorii produktů --> 
+                        <ul class="list-group" id="categoryFilter">   
+                            <li class="list-group-item" data-category="doplnky">Doplňky</li>  
+                            <li class="list-group-item" data-category="women">WOMEN</li>  
+                            <li class="list-group-item" data-category="men">MEN</li>  
+                        </ul>  
+                        <h5 class="mt-4">Cena</h5>  
+                        <div class="price-filter">  
+                            <div class="price-value">  
+                                <span id="minPriceValue">100 Kč</span>  
+                                <span id="maxPriceValue">1999 Kč</span>  
+                            </div>  
+                            <div class="slider-container">  
+                                <div class="slider-track"></div>  
+                                <div class="slider-range" id="sliderRange"></div>  
+                                <input type="range" min="100" max="1999" value="100" class="slider-min" id="minPrice">  
+                                <input type="range" min="100" max="1999" value="1999" class="slider-max" id="maxPrice">  
+                            </div>  
+                        </div>  
+                        <h5 class="mt-4">Vyhledávání</h5>  
+                        <input type="text" class="form-control" id="productSearch" placeholder="Zadejte hledaný text...">  
+                        <button class="btn btn-primary mt-3 w-100" id="filterButton" type="button">Hledat</button>  
+                        <button class="btn btn-darkest mt-2 w-100" id="cancelFilterButton" type="button" style="display: none;">Zrušit filtr</button>  
+                    </div>  
+                </div>  
+                <div class="col-md-9">  
+                    <h2 class="mb-4">Sportovní Oblečení</h2>  <!-- Název kategorie -->
+                    <div class="row" id="productGrid">  
+                        <!-- Produkty -->  
+                        <div class="col-md-4 mb-4" data-category="doplnky">  
+                            <div class="card">  
+                                <div class="product-img-container">
+                                    <img src="images\obleceni\black_cap_f.webp" class="card-img-top product-img" alt="Č. Kšilotovka">
+                                    <img src="images\obleceni\black_cap_s.webp" class="card-img-top product-img-hover" alt="Kšilotovka Hover">
+                                </div>
+                                <div class="card-body"> 
+                                    <h5 class="card-title">Černá Kšilotovka</h5>  
+                                    <p class="card-text price">420 Kč</p>  
+                                    <p class="card-text">Skladem</p>  
+                                    <button class="btn btn-warning">Do košíku</button>  
+                                </div>  
+                            </div>  
+                        </div>  
+                        <div class="col-md-4 mb-4" data-category="doplnky">  
+                            <div class="card">  
+                                <div class="product-img-container">
+                                    <img src="images\obleceni\black_socks_f.webp" class="card-img-top product-img" alt="Č. Ponožky">
+                                    <img src="images\obleceni\black_socks_b.webp" class="card-img-top product-img-hover" alt="Ponožky Hover">
+                                </div>
+                                <div class="card-body"> 
+                                    <h5 class="card-title">Černé Ponožky</h5>  
+                                    <p class="card-text price">366 Kč</p>  
+                                    <p class="card-text">Skladem</p>  
+                                    <button class="btn btn-warning">Do košíku</button>  
+                                </div>  
+                            </div>  
+                        </div>
+                        <div class="col-md-4 mb-4" data-category="doplnky">  
+                            <div class="card">  
+                                <div class="product-img-container">
+                                    <img src="images\obleceni\white_socks_f.webp" class="card-img-top product-img" alt="Bílé Ponožky">
+                                    <img src="images\obleceni\white_socks_b.webp" class="card-img-top product-img-hover" alt="Bílé Ponožky Hover">
+                                </div>
+                                <div class="card-body"> 
+                                    <h5 class="card-title">Bílé Ponožky</h5>  
+                                    <p class="card-text price">249 Kč</p>  
+                                    <p class="card-text">Skladem</p>  
+                                    <button class="btn btn-warning">Do košíku</button>  
+                                </div>  
+                            </div>  
+                        </div>
+                        <div class="col-md-4 mb-4" data-category="women">  
+                            <div class="card">  
+                                <div class="product-img-container">
+                                    <img src="images\obleceni\cerne_leg_f.webp" class="card-img-top product-img" alt="
+                                    Černé Legíny">
+                                    <img src="images\obleceni\cerne_leg_b.webp" class="card-img-top product-img-hover" alt="Černé Legíny Hover">
+                                </div>
+                                <div class="card-body"> 
+                                    <h5 class="card-title">Černé Legíny</h5>  
+                                    <p class="card-text price">1355 Kč</p>  
+                                    <p class="card-text">Skladem</p>  
+                                    <button class="btn btn-warning">Do košíku</button>  
+                                </div>  
+                            </div>  
+                        </div>  
+                        <div class="col-md-4 mb-4" data-category="women">  
+                            <div class="card">  
+                                <div class="product-img-container">
+                                    <img src="images/obleceni/white_bra_f.webp" class="card-img-top product-img" alt="Bílá sport. podprsenka">
+                                    <img src="images\obleceni\white_bra_b.webp" class="card-img-top product-img-hover" alt="Bílá sport. podprsenka Hover">
+                                </div>
+                                <div class="card-body"> 
+                                    <h5 class="card-title">Bílá sportovní Podprsenka</h5>  
+                                    <p class="card-text price">890 Kč</p>  
+                                    <p class="card-text">Skladem</p>  
+                                    <button class="btn btn-warning">Do košíku</button>  
+                                </div>  
+                            </div>  
+                        </div>
+                        <div class="col-md-4 mb-4" data-category="women">  
+                            <div class="card">  
+                                <div class="product-img-container">
+                                    <img src="images\obleceni\cerne_kra_f.webp" class="card-img-top product-img" alt="Černé Kraťasy">
+                                    <img src="images\obleceni\cerne_kra_b.webp" class="card-img-top product-img-hover" alt="Černé Kraťasy Hover">
+                                </div>
+                                <div class="card-body"> 
+                                    <h5 class="card-title">Černé sportovní Kraťasy</h5>  
+                                    <p class="card-text price">1234 Kč</p>  
+                                    <p class="card-text">Skladem</p>  
+                                    <button class="btn btn-warning">Do košíku</button>  
+                                </div>  
+                            </div>  
+                        </div>
+                        <div class="col-md-4 mb-4" data-category="men">  
+                            <div class="card">  
+                                <div class="product-img-container">
+                                    <img src="images\obleceni\black_hood_f.webp" class="card-img-top product-img" alt="Černá Mikina">
+                                    <img src="images\obleceni\black_hood_b.webp" class="card-img-top product-img-hover" alt="Černá Mikina Hover">
+                                </div>
+                                <div class="card-body"> 
+                                    <h5 class="card-title">Černá klokaní Mikina s kapucí</h5>  
+                                    <p class="card-text price">1739 Kč</p>  
+                                    <p class="card-text">Skladem</p>  
+                                    <button class="btn btn-warning">Do košíku</button>  
+                                </div>  
+                            </div>  
+                        </div>  
+                        <div class="col-md-4 mb-4" data-category="men">  
+                            <div class="card">  
+                                <div class="product-img-container">
+                                    <img src="images\obleceni\black_tee_f.webp" class="card-img-top product-img" alt="Černé Triko">
+                                    <img src="images\obleceni\black_tee_b.webp" class="card-img-top product-img-hover" alt="Černé Triko Hover">
+                                </div>
+                                <div class="card-body"> 
+                                    <h5 class="card-title">Černé sportovní Tričko relax fit</h5>  
+                                    <p class="card-text price">990 Kč</p>  
+                                    <p class="card-text">Skladem</p>  
+                                    <button class="btn btn-warning">Do košíku</button>  
+                                </div>  
+                            </div>  
+                        </div>
+                        <div class="col-md-4 mb-4" data-category="men">  
+                            <div class="card">  
+                                <div class="product-img-container">
+                                    <img src="images\obleceni\black_tra_f.webp" class="card-img-top product-img" alt="Černé Tepláky">
+                                    <img src="images\obleceni\black_tra_b.webp" class="card-img-top product-img-hover" alt="Černé Tepláky Hover">
+                                </div>
+                                <div class="card-body"> 
+                                    <h5 class="card-title">Černé větrové sportovní Tepláky</h5>  
+                                    <p class="card-text price">1520 Kč</p>  
+                                    <p class="card-text">Skladem</p>  
+                                    <button class="btn btn-warning">Do košíku</button>  
+                                </div>  
+                            </div>  
+                        </div>
+                        <!-- Další produkty mohou být přidány zde -->  
+                    </div>  
+                </div>  
+            </div>  
+        </div>  
+ 
+        <!-- Footer -->
+        <footer class="footer bg-dark py-4">
+            <div class="footerContent container text-center">
+                <div class="social-links">
+                    <a href="https://www.facebook.com/compranutristar?locale=cs_CZ" class="text-purple me-3" target="_blank">Facebook</a>
+                    <a href="https://www.instagram.com/nutristar.cz/" class="text-purple me-3" target="_blank">Instagram</a>
+                    <a href="#" class="text-purple" target="_blank">Kontakty</a>
+                </div>
+                <p class="footerText">&copy; 2025 Nutristar. Všechna práva vyhrazena.</p>
+            </div>
+        </footer>
+    </div>  
+
+    <!-- Bootstrap JS a Popper.js -->  
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>  
+    <script src="javascript/products.js"></script>
+</body>  
+</html>  

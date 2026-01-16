@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grafika (DIM) - Jan Zima</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <ul class="nav-links left-nav">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="gallery.html" class="active">GALLERY</a></li>
+                <li><a href="about.html">ABOUT ME</a></li>
+            </ul>
+            <a href="contact.html" class="btn btn-cta input-cta">CONTACT ME</a>
+            <button class="menu-toggle" aria-label="Otevřít menu">☰</button>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1 class="page-title center-text">GALLERY. DEPT. <br> <span class="subtitle">GRAPHIC WORKS</span></h1>
+
+        <div class="filter-controls" style="text-align:center; margin-bottom: 2rem;">
+        <div class="filters center-text">
+            <button class="filter-btn active" data-filter="all">ALL</button>
+            <button class="filter-btn" data-filter="illustrace">ILLUSTRACE</button>
+            <button class="filter-btn" data-filter="photomanipulace">PHOTOMANIPULACE</button>
+            <button class="filter-btn" data-filter="graficke-designy">GRAFICKÉ DESIGNY</button>
+        </div>
+
+        <div class="dim-grid">
+            <!-- Položka 1 -->
+            <div class="dim-item modal-trigger" data-category="graficke-designy" data-title="Generační setkání s speciálním hostem Muradovem"
+                data-software="Adobe Photoshop, Illustrator"
+                data-desc="Návrh plakátu pro Mezigenerační setkání s speciálním hostem Muradovem. Použití výrazné typografie a vlastních ilustrací. Cílem bylo zaujmout mladší publikum a předat atmosféru akce.">
+                <div class="dim-image-wrapper">
+                    <img src="img/muradov.png" alt="Plakát">
+                </div>
+                <p class="dim-desc">Generační setkání s speciálním hostem Muradovem</p>
+            </div>
+            <!-- Položka 2 -->
+            <div class="dim-item modal-trigger" data-category="graficke-designy" data-title="Design pro Weilovka mikinu" data-software="Adobe Illustrator"
+                data-desc="Vizuální navrh pro merch naší školy ve stylu Univerzitní mikiny/svetrů. Navrh byl vytvořen v rámci kontestu o nejlepší navrh pro nový merch naší školy. Oceněný však nebyl z důvodu, nevyužití nového designu logo znaku naší školy">
+                <div class="dim-image-wrapper">
+                    <img src="img\weilovkanavrhmikina.png" alt="MikinaWeilovka">
+                    <img src="img/mockupp.png" class="img-back" alt="Back">
+                </div>
+                <p class="dim-desc">Navrh na školní mikinu</p>
+            </div>
+            <!-- Položka 3 -->
+            <div class="dim-item modal-trigger" data-category="photomanipulace" data-title="Produktový banner Nutristar" data-software="Adobe Photoshop"
+                data-desc="Pokročilá retuš produktové fotografie pro e-shop. Odstranění odlesků, úprava barev a vyčištění pozadí. Výsledná fotografie zvyšuje atraktivitu produktu. Práce zahrnovala i montáž stínů. Cílem bylo vytvořit poutavý vizuál, který zaujme zákazníky a zvýrazní produkt. Práce zahrnovala úpravu fotografií, montáž a grafické zpracování">
+                <div class="dim-image-wrapper">
+                    <img src="img/product_banner.png" alt="Produktový banner Nutristar">
+                </div>
+                <p class="dim-desc">Produktový banner Nutristar</p>
+            </div>
+            <!-- Položka 4 -->
+            <div class="dim-item modal-trigger" data-category="illustrace" data-title="Vektorová Ilustrace" data-software="Adobe Illustrator"
+                data-desc="Vektorová ilustrace pro karierní den naší školy. Cílem bylo vytvořit poutavý vizuál, který zaujme studenty a zvýrazní produkt. Práce zahrnovala úpravu fotografií, montáž a grafické zpracování">
+                <div class="dim-image-wrapper">
+                    <img src="img/karierni_den_zima.png" alt="Vektorová Ilustrace">
+                </div>
+                 <p class="dim-desc">Vektorová Ilustrace</p>
+            </div>
+            <!-- Položka 5 -->
+            <div class="dim-item modal-trigger" data-category="illustrace" data-title="Here comes the sun" data-software="Adobe Photoshop"
+                data-desc="Vlastní ilustrace vytvořená pro radost. Cílem bylo vytvořit poutavý vizuál, který zaujme studenty a zvýrazní produkt. Práce zahrnovala úpravu fotografií, montáž a grafické zpracování">
+                <div class="dim-image-wrapper">
+                    <img src="img/here_comes_the_sun.jpg" alt="Here comes the sun">
+                     <img src="img/hctsbudova.png" class="img-back" alt="Back">
+                </div>
+                <p class="dim-desc">Here comes the sun</p>
+            </div>
+            <!-- Položka 6 -->
+            <div class="dim-item modal-trigger" data-category="illustrace" data-title="Cesta do pravěku" data-software="Adobe InDesign"
+                data-desc="Vlastní ilustrace navrh na herní mapu pro celotábrovou hru. Cílme bylo vytvořit přehledný herní plán, který bude fungovat při hře jako podklad pro hru">
+                <div class="dim-image-wrapper">
+                    <img src="img/cesta_do_praveka.png" alt="Cesta do pravěku">
+                </div>
+                <p class="dim-desc">Cesta do pravěku</p>
+            </div>
+            <!-- Položka 7 -->
+            <div class="dim-item modal-trigger" data-category="illustrace" data-title="Vysehard" data-software="Adobe InDesign"
+                data-desc="Vlastní ilustrace vytvořená pro radost. Cílem bylo vytvořit poutavý vizuál, který zaujme studenty a zvýrazní produkt. Práce zahrnovala úpravu fotografií, montáž a grafické zpracování">
+                <div class="dim-image-wrapper">
+                    <img src="img/vysehradfinal.png" alt="Vysehard">
+                    <img src="img/Vysehradbudova.png" class="img-back" alt="Back">
+                </div>
+                <p class="dim-desc">Vyšehard</p>
+            </div>
+            <!-- Položka 8 -->
+            <div class="dim-item modal-trigger" data-category="photomanipulace" data-title="SmackChimera" data-software="Adobe InDesign, Adobe Photoshop"    
+                data-desc="Vlastní ilustrace vytvořená pro radost. Cílem bylo vytvořit poutavý vizuál, který zaujme kolem jdoucího a zvýrazní samotnu budovu. Práce zahrnovala úpravu vlastních fotografií, koláž a grafické zpracování">
+                <div class="dim-image-wrapper">
+                    <img src="img/chimerasmack.png" alt="SmackChimera">
+                    <img src="img/Smackbudova.jpg" class="img-back" alt="Back">
+                </div>
+                <p class="dim-desc">SmackChimera</p>
+            </div>
+            <!-- Položka 9-->
+            <div class="dim-item modal-trigger" data-category="graficke-designy" data-title="Karetní hra MOMENT" data-software="Adobe InDesign, Adobe Photoshop"    
+                data-desc="Vlastnoručně vytvořený design pro karetní hru">
+                <div class="dim-image-wrapper">
+                    <img src="img/cardback.png" alt="Karetní hra MOMENT">
+                </div>
+                <p class="dim-desc">Karetní hra MOMENT</p>
+            </div>
+           
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-nav">
+                    <a href="contact.html">CONTACT ME</a>
+                    <a href="gallery.html">FOLLOW ME</a>
+                    <a href="mailto:jan.zima05@gmail.com">EMAIL</a>
+                </div>
+                <div class="footer-nav">
+                    <a href="about.html">ABOUT ME</a>
+                    <a href="gallery.html">GALLERY</a>
+                    <a href="index.html">HOME</a>
+                </div>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=100010751175639"><img src="img/facebook.svg" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/honza_zima_/"><img src="img/instagram.svg" alt="Instagram"></a>
+                    <a href="https://www.linkedin.com/in/jan-zima-7115742ba/"><img src="img/linkedin.svg" alt="LinkedIn"></a>
+                    <a href="https://github.com/Honza4231"><img src="img/github.svg" alt="GitHub"></a>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2026 Jan Zima | SOŠAIG
+            </div>
+        </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" title="Nahoru">↑</button>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
